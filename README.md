@@ -1,2 +1,0 @@
-# AISKILL_Copilot_Shared_NodeJS_Backend
-AISKILL_Copilot_Shared_NodeJS_Backend
