@@ -1,0 +1,5 @@
+[submodule "projects/Kiemdinhoto_StationServer"]
+	path = projects/Kiemdinhoto_StationServer
+	url = https://github.com/FreeDevTeam/Kiemdinhoto_StationServer.git
+	branch = Release/v5.0.0
+	shallow = true
