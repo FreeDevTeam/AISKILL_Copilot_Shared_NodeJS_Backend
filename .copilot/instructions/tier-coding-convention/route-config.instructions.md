@@ -30,5 +30,5 @@ handler: 'insertWorldTask',
 - Auth/permission phải cấu hình trong pre method theo CommonFunctions hoặc middleware (tham khảo source hiện tại đang viết các API thế nào thì dùng thế ấy vì có sự khác nhau giữa các version source).
 - Schema validate phải được viết riêng và viết trực tiếp trong route config, TUYỆT ĐỐI KHÔNG DÙNG CHUNG VỚI database (trong folder "resourceAccess") hoặc response model (trong folder "model").
 - Schema nếu không cần dùng chung cho các route config khác trong cùng file thì ko cần định nghĩa constant mà hãy code chung vào route config cho gọn code. Thông thường CRUD sẽ có schema riêng cho từng action. nhưng các vai trò khác nhau thì thường lại có chung schema (chỉ khác phân quyền chứ không khác schema)
-
+- Route không chứa business logic, chỉ dispatch về manager.
 
