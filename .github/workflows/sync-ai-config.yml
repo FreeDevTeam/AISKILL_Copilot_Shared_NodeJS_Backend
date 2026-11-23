@@ -2,14 +2,10 @@ name: Sync AI skills to project repos
 
 # Khi có commit thay đổi skill / instruction / template / script trên main:
 # checkout từng repo dự án (submodule trong projects/), copy file theo ai-sync.config.json,
-# rồi commit + push lên branch chore/sync-ai-skills và tạo / cập nhật PR ở repo dự án.
+# rồi commit + push trực tiếp lên branch được cấu hình trong .gitmodules.
 #
-# Yêu cầu secrets:
+# Yêu cầu secret:
 #   AI_SYNC_SSH_PRIVATE_KEY: SSH private key có quyền push lên tất cả repo dự án.
-#   AI_SYNC_TOKEN (không bắt buộc): Personal Access Token (fine-grained) có quyền Pull requests: Read and write
-#     trên tất cả repo dự án để tạo / cập nhật PR qua GitHub API. Nếu không cấu hình, workflow vẫn push branch
-#     đồng bộ qua SSH nhưng bỏ qua bước tạo / cập nhật PR.
-# (SSH dùng cho Git clone / push; AI_SYNC_TOKEN chỉ dùng cho GitHub API.)
 
 on:
   push:
@@ -69,7 +65,6 @@ jobs:
 
       - name: Sync skills / instructions / configs
         env:
-          AI_SYNC_TOKEN: ${{ secrets.AI_SYNC_TOKEN }}
           INPUT_TARGET: ${{ github.event.inputs.target }}
           INPUT_DRY_RUN: ${{ github.event.inputs.dry_run }}
         run: |

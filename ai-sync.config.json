@@ -25,7 +25,7 @@
   ],
   "git": {
     "syncBranch": "chore/sync-ai-skills",
-    "pushMode": "pr",
+    "pushMode": "direct",
     "commitMessage": "chore(ai): sync shared AI skills, instructions and agent configs",
     "authorName": "ai-skill-sync-bot",
     "authorEmail": "ai-skill-sync-bot@users.noreply.github.com"
