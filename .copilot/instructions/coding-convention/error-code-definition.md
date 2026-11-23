@@ -1,6 +1,6 @@
 # Quy Ước Định Nghĩa Mã Lỗi
 
-- Mã lỗi phải được định nghĩa dưới dạng string CODE ONLY trong file constant.
+- Mã lỗi phải được định nghĩa dưới dạng string CODE ONLY trong file constant, key và value của mỗi mã lỗi phải giống nhau.
 - Không dùng function để tạo mã lỗi trong constant.
 - Không hardcode mã lỗi trong manager hoặc route.
 - Nếu hệ thống đã có mã lỗi dùng chung trong CommonConstant thì phải ưu tiên tái sử dụng, không định nghĩa trùng.

@@ -10,6 +10,7 @@ description: "Use for every code change in this repository: create/update/refact
 - Luôn đọc skill này trước khi chỉnh sửa code trong repository.
 - Format code theo chuẩn Prettier đã được lưu sẵn trong .prettierrc của dự án
 - Dùng function declaration, không arrow cho named function.
+- Không được dùng assert trong code, trừ khi đó là đang viết test case trong file *.spec.js 
 
 ## Quy Tắc Cốt Lõi
 - Việc gọi hàm phải được gọi rõ ràng, tuyệt đối không được gọi hàm gián tiếp thông qua biến, object, array, hoặc bất kỳ cách nào khác. Ví dụ: `const func = myFunction; func();` là không được phép.
@@ -55,7 +56,10 @@ Ví dụ: { stationCode: stationCode } thay vì { stationCode }.
 
 ## Tài Liệu Tham Chiếu
 
-- Quy ước cách code cho manager: ./references/manager-structure.md
-- Quy ước định nghĩa mã lỗi: ./references/error-code-definition.md
-- Quy ước route và validate: ./references/route-validation.md
-- Quy ước log API Partner: ./references/partner-api-logging.md
+- Quy ước cách code cho manager: ./coding-convention/manager-structure.md
+- Quy ước định nghĩa mã lỗi: ./coding-convention/error-code-definition.md
+- Quy ước route và validate: ./coding-convention/route-validation.md
+- Quy ước lưu trữ dữ liệu database: ./coding-convention/data-storage-database.instructions.md
+- Quy ước lưu trữ dữ liệu local file: ./coding-convention/data-storage-localfile.instructions.md
+- Quy ước log API Partner: ./coding-convention/partner-api-logging.md
+- Quy ước khai báo hàm: ./coding-convention/function-declaration-convention.instructions.md

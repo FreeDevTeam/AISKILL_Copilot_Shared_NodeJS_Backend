@@ -42,6 +42,15 @@ function getDescriptionAutoNotifyViolation(
   // logic here
 }
 
+## Export Convention
+
+All functions must be exported using direct name.
+
+### Example
+// Named export
+module.exports = {
+  functionName,
+};
 ---
 
 ## Scope
