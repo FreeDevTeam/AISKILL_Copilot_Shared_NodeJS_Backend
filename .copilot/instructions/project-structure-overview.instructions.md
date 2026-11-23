@@ -27,9 +27,10 @@ This instruction describes top-level folders (1 level) to help quickly identify 
 - API/: Main business modules, route/manager/model patterns, and endpoint logic.
 - ThirdParty/: Integrations with external services and partner APIs.
 - Test/: Test suites and test helpers.
-- config/ + configFiles/: Runtime settings and environment-specific configuration.
+- config/ + configFiles/: Runtime settings, mcp, middlewares, and environment-specific configuration.
 - cron/: Scheduled and background task definitions.
 - document/: API docs and project documentation assets.
 - utils/: Shared utility helpers across modules.
 - uploads/ + images/: Runtime uploaded files and static image assets.
 - sqlscript/: Database SQL scripts and migration-related files.
+- running/: Runtime state and process-related files. (e.g., PID files, lock files). User do not upload directly to here.
