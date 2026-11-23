@@ -6,8 +6,9 @@ name: Sync AI skills to project repos
 #
 # Yêu cầu secrets:
 #   AI_SYNC_SSH_PRIVATE_KEY: SSH private key có quyền push lên tất cả repo dự án.
-#   AI_SYNC_TOKEN: Personal Access Token (fine-grained) có quyền Pull requests: Read and write
-#     trên tất cả repo dự án để tạo / cập nhật PR qua GitHub API.
+#   AI_SYNC_TOKEN (không bắt buộc): Personal Access Token (fine-grained) có quyền Pull requests: Read and write
+#     trên tất cả repo dự án để tạo / cập nhật PR qua GitHub API. Nếu không cấu hình, workflow vẫn push branch
+#     đồng bộ qua SSH nhưng bỏ qua bước tạo / cập nhật PR.
 # (SSH dùng cho Git clone / push; AI_SYNC_TOKEN chỉ dùng cho GitHub API.)
 
 on:
@@ -65,15 +66,6 @@ jobs:
           mkdir -p -m 0700 ~/.ssh
           ssh-keyscan -H github.com >> ~/.ssh/known_hosts
           chmod 0600 ~/.ssh/known_hosts
-
-      - name: Validate GitHub API token
-        env:
-          AI_SYNC_TOKEN: ${{ secrets.AI_SYNC_TOKEN }}
-        run: |
-          if [ -z "$AI_SYNC_TOKEN" ]; then
-            echo "::error::Chưa cấu hình secret AI_SYNC_TOKEN"
-            exit 1
-          fi
 
       - name: Sync skills / instructions / configs
         env:
