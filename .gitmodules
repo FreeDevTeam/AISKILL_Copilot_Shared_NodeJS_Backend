@@ -1,5 +1,10 @@
 [submodule "projects/Kiemdinhoto_StationServer"]
 	path = projects/Kiemdinhoto_StationServer
-	url = https://github.com/FreeDevTeam/Kiemdinhoto_StationServer.git
-	branch = Release/v5.0.0
+	url = git@github.com:FreeDevTeam/Kiemdinhoto_StationServer.git
+	branch = Release/v5.1.0
+	shallow = true
+[submodule "projects/DichVuCong_GPTAgent_Backend"]
+	path = projects/DichVuCong_GPTAgent_Backend
+	url = git@github.com:FreeDevTeam/DichVuCong_GPTAgent_Backend.git
+	branch = main
 	shallow = true

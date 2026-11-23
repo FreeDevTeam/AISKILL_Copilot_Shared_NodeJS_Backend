@@ -5,6 +5,11 @@
       "name": "Kiemdinhoto_StationServer",
       "path": "projects/Kiemdinhoto_StationServer",
       "enabled": true
+    },
+    {
+      "name": "DichVuCong_GPTAgent_Backend",
+      "path": "projects/DichVuCong_GPTAgent_Backend",
+      "enabled": true
     }
   ],
   "mappings": [
