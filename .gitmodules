@@ -8,3 +8,15 @@
 	url = git@github.com:FreeDevTeam/DichVuCong_GPTAgent_Backend.git
 	branch = main
 	shallow = true
+[submodule "projects/KiemDinhOto_AgentETrafficClient"]
+	path = projects/KiemDinhOto_AgentETrafficClient
+	url = git@github.com:FreeDevTeam/KiemDinhOto_AgentETrafficClient.git
+	branch = main
+[submodule "projects/ZWorldAdventur_Backend"]
+	path = projects/ZWorldAdventur_Backend
+	url = git@github.com:chaunnt/ZWorldAdventur_Backend.git
+	branch = main
+[submodule "projects/KiemDinhOto_Service_TraCuuPhatNguoi"]
+	path = projects/KiemDinhOto_Service_TraCuuPhatNguoi
+	url = git@github.com:FreeDevTeam/KiemDinhOto_Service_TraCuuPhatNguoi.git
+	branch = main

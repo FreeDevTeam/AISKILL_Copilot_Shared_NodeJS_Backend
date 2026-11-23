@@ -10,6 +10,21 @@
       "name": "DichVuCong_GPTAgent_Backend",
       "path": "projects/DichVuCong_GPTAgent_Backend",
       "enabled": true
+    },
+    {
+      "name": "KiemDinhOto_AgentETrafficClient",
+      "path": "projects/KiemDinhOto_AgentETrafficClient",
+      "enabled": true
+    },
+    {
+      "name": "ZWorldAdventur_Backend",
+      "path": "projects/ZWorldAdventur_Backend",
+      "enabled": true
+    },
+    {
+      "name": "KiemDinhOto_Service_TraCuuPhatNguoi",
+      "path": "projects/KiemDinhOto_Service_TraCuuPhatNguoi",
+      "enabled": true
     }
   ],
   "mappings": [
