@@ -27,6 +27,7 @@ handler: 'insertWorldTask',
 ## Nguyên tắc validate cho route config
 - Tất cả endpoint phải có schema validate rõ ràng cho headers/payload/query(nếu có sử dụng). Thông thường sẽ luôn có validate cho payload vì tất cả request đều là dạng POST (trừ 1 vài request đặc thù do developer chủ động tạo theo yêu cầu đặc biệt).
 - Giới hạn batch (min/max) phải đặt trong Joi schema tại route.
+- Field enum (kể cả trong filter) luôn có `.valid(Object.values(CONSTANT))` kèm `.description()` sinh từ chính constant đó dạng `giá trị: KEY` (dùng `Object.entries`, không viết tay, dùng hàm chung trong utils là function getEnumDescription(), nếu không có thì tạo ra và dùng chung, cho các nơi cần Object.entries ).
 - Auth/permission phải cấu hình trong pre method theo CommonFunctions hoặc middleware (tham khảo source hiện tại đang viết các API thế nào thì dùng thế ấy vì có sự khác nhau giữa các version source).
 - Schema validate phải được viết riêng và viết trực tiếp trong route config, TUYỆT ĐỐI KHÔNG DÙNG CHUNG VỚI database (trong folder "resourceAccess") hoặc response model (trong folder "model").
 - Schema nếu không cần dùng chung cho các route config khác trong cùng file thì ko cần định nghĩa constant mà hãy code chung vào route config cho gọn code. Thông thường CRUD sẽ có schema riêng cho từng action. nhưng các vai trò khác nhau thì thường lại có chung schema (chỉ khác phân quyền chứ không khác schema)
